@@ -3,6 +3,7 @@ import './App.css';
 import FirstComponent from './Components/FirstComponent';
 import FooterComponent from './Components/FooterComponent';
 import WelcomeComponent from './Components/WelcomeComponent';
+import AllTheBooksComponent from './Components/AllTheBooksComponent';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
    <FirstComponent/>
    <WelcomeComponent/>
+   <AllTheBooksComponent/>
    <FooterComponent/>
 
    
