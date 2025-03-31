@@ -1,19 +1,43 @@
 import React from 'react'
-import {Navbar, Container, Nav} from 'react-bootstrap'
+import {Navbar, Container, Nav, Form, Button} from 'react-bootstrap'
+import { ThemeContext } from '../Modules/context'
+import { useContext } from 'react'
 
-function FirstComponent() {
+
+function FirstComponent({data, setData}) {
+
+
+  const [theme, setTheme] = useContext(ThemeContext);
+
     return (
 
-        <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">EpiBooks</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">About</Nav.Link>
-            <Nav.Link href="#">Browse</Nav.Link>
+      <Navbar expand="lg" bg={theme} data-bs-theme={theme}>
+      <Container fluid>
+        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="#action2">About</Nav.Link>
+            <Nav.Link href="#action2">Browse</Nav.Link>
           </Nav>
-        </Container>
-      </Navbar>
+          <Button variant="secondary" className='mx-2'onClick={() => {theme === "dark" ? setTheme("light") : setTheme("dark") }}>Theme</Button>
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              onChange={(e) => setData(e.target.value)}
+              className="me-2"
+              aria-label="Search"
+            />
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
         
     )
 }
