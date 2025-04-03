@@ -6,6 +6,9 @@ import WelcomeComponent from './Components/WelcomeComponent';
 import AllTheBooksComponent from './Components/AllTheBooksComponent';
 import { useEffect, useState } from 'react';
 import { ThemeContext } from './Modules/context';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NotFoundComponent from './Components/NotFoundComponent';
+import BookDetailsComponent from './Components/BookDetailsComponent';
 
 
 
@@ -20,13 +23,27 @@ function App() {
   return (
     
     <>
+   <BrowserRouter>
 
-   <ThemeContext.Provider value={[theme, setTheme]}>
-   <FirstComponent data={data} setData={setData}/>
-   <WelcomeComponent/>
-   <AllTheBooksComponent data={data}/>
-   <FooterComponent/>
+       <ThemeContext.Provider value={[theme, setTheme]}>
+       <FirstComponent data={data} setData={setData}/>
+       
+       <Routes>
+          <Route path='/' element={
+            <>
+            <WelcomeComponent/>
+            <AllTheBooksComponent data={data}/>
+            </>
+            }/>
+            <Route path='/book/:asin' element={<BookDetailsComponent/>}/>
+            <Route path='*' element={<NotFoundComponent/>}/>
+            
+       </Routes>
+       
+       <FooterComponent/>
    </ThemeContext.Provider>
+
+   </BrowserRouter>
 
    
    

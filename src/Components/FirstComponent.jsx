@@ -2,6 +2,7 @@ import React from 'react'
 import {Navbar, Container, Nav, Form, Button} from 'react-bootstrap'
 import { ThemeContext } from '../Modules/context'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom';
 
 
 function FirstComponent({data, setData}) {
@@ -21,9 +22,9 @@ function FirstComponent({data, setData}) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">About</Nav.Link>
-            <Nav.Link href="#action2">Browse</Nav.Link>
+             <Link to="/" className='nav-link'>Home</Link> 
+             <Nav.Link href="#action2">About</Nav.Link>
+             <Nav.Link href="#action2">Browse</Nav.Link>
           </Nav>
           <Button variant="secondary" className='mx-2'onClick={() => {theme === "dark" ? setTheme("light") : setTheme("dark") }}>Theme</Button>
           <Form className="d-flex">
