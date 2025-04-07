@@ -96,7 +96,7 @@ describe('Comment test', () => {
     const allCards = screen.getAllByTestId('longBook');
     const firstCard = allCards[0]
     fireEvent.click(firstCard)
-    const allComments = await screen.findAllByTestId('longComment')
+    const allComments = await screen.findAllByTestId("longComment");
     expect(allComments).not.toHaveLength(0)
     })
 })

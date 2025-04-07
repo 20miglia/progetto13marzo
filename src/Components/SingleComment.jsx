@@ -30,7 +30,9 @@ function SingleComment({ toShow, updateComment }) {
 
     return (
 
-        <ListGroupItem data-tesid='longComment' key={toShow._id}>
+        <ListGroupItem 
+        data-testid="longComment" 
+        key={toShow._id}>
 
             {toShow.comment}
 
