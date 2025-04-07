@@ -3,8 +3,11 @@ import { Container, Row } from 'react-bootstrap'
 
 
 function FooterComponent() {
+
+ 
+
   return (
-    <footer className='bg-dark mt-5 text-white py-4 fix-bottom'>
+    <footer className="bg-dark mt-5 text-white py-4 fix-bottom">
 
       <Container>
         <Row className="text-center" >

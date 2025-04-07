@@ -96,7 +96,7 @@ function AllTheBooksComponent({data}) {
         </Row>
        </Col>
 
-       <Col md={4}>
+       <Col md={4} className='bg-dark text-white'>
           <h3 className='text-center'>Comment Area</h3>
            {selected ? <CommentAreaComponent asin={selected}/> : <h4>Seleziona un libro e lascia il tuo commento</h4>}            {/* <CommentAreaComponent asin={selected}/> */}
           

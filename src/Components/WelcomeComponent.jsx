@@ -1,6 +1,7 @@
 import React from 'react'
 import { Alert } from 'react-bootstrap'
 
+
 function WelcomeComponent() {
     return (
         <Alert className="text-center bg-secondary border-dark">
