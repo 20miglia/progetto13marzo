@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
 import Books from '../External/history.json'
 import { Container, Row, Col } from 'react-bootstrap';
 import SingleBook from '../Components/SingleBook';
@@ -8,9 +8,13 @@ import CommentAreaComponent from './CommentAreaComponent';
 
 
 
+
+
+
 const arrayBooks = Books
 
 function AllTheBooksComponent({data}) {
+
   //Creiamo uno "Stato"
   const [autore, setAutore] = useState(arrayBooks) // "useState" è il nostro "Hook" e tra le parente tonde inseriamo 
   const [selected, setSelected] = useState("")  // il nostro valore iniziale che è "arrayBooks"
@@ -61,16 +65,18 @@ function AllTheBooksComponent({data}) {
 
 
 
-     <Container className="mt-4">
+     <Container className="mt-2">
       <Row>
-       <Col md={8}>
+       <Col md={8} className='bg-dark'>
          
          <Row>
 
         {autore.map((u) => (                      //A questo punto non facciamo il map su "arrayBooks" ma su "autore" che è il nome della variabile definita nello "Stato" che all'interno ha sempre "arrayBooks"
-        <Col xs={12} sm={6} md={4} lg={3}> 
+        <Col xs={12} md={4} lg={3} className='gy-3'> 
         <SingleBook key={u.asin} set={u} selected={selected} setSelected={setSelected}/>   
+        
         </Col>)
+        
         // <Card>
         // <Card.Img variant="top" src={u.img} />
         //  <Card.Body>
@@ -81,7 +87,7 @@ function AllTheBooksComponent({data}) {
         // </Card.Body>
         // </Card>
       
-      
+       
         // </Col>
       
       
@@ -91,7 +97,7 @@ function AllTheBooksComponent({data}) {
        </Col>
 
        <Col md={4}>
-          <h3>Comment Area</h3>
+          <h3 className='text-center'>Comment Area</h3>
            {selected ? <CommentAreaComponent asin={selected}/> : <h4>Seleziona un libro e lascia il tuo commento</h4>}            {/* <CommentAreaComponent asin={selected}/> */}
           
        </Col>

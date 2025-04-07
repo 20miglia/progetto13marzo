@@ -79,7 +79,9 @@ const sendComment = async (e) => {
             <Form onSubmit={sendComment}>
                 <Form.Group className="mb-3">
                     <Form.Label>Lascia qui la tua recensione</Form.Label>
-                    <Form.Control type="text" placeholder="Inserisci il testo" value={newComment.comment}
+                    <Form.Control type="text" 
+                                  placeholder="Inserisci il testo" 
+                                  value={newComment.comment}
                     
                     onChange={(e) => setNewComment ({
 
@@ -107,7 +109,7 @@ const sendComment = async (e) => {
                     <option value="5">Five</option>
                 </Form.Select>
 
-                <Button variant="success" type="submit">Invia</Button>
+                <Button variant="success" type="submit" className='mt-2'>Invia Recensione</Button>
             </Form>
 
         </div>

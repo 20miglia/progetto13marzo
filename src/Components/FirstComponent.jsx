@@ -30,7 +30,7 @@ function FirstComponent({data, setData}) {
           <Form className="d-flex">
             <Form.Control
               type="search"
-              placeholder="Search"
+              placeholder="Cerca un libro"
               onChange={(e) => setData(e.target.value)}
               className="me-2"
               aria-label="Search"

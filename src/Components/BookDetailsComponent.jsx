@@ -12,7 +12,7 @@ function BookDetailsComponent() {
     return (
 
         <Row className="justify-content-center">
-            <Col md={4}>
+            <Col md={3}>
                 <Card>
                     <Card.Img variant="top" src={searchBook.img} />
                     <Card.Body>
