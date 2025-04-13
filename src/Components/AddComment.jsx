@@ -38,7 +38,7 @@ const sendComment = async (e) => {
           body: JSON.stringify(newComment),
           headers: {
             'Content-type': 'application/json',
-             Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2JkZTZkZjFlMTQwNjAwMTUzMTRkMGQiLCJpYXQiOjE3NDI5MTY1MDYsImV4cCI6MTc0NDEyNjEwNn0.95vzuF2tazAuVpYBEPPBpjUfV4t_4-aJgnN7KlAaHDo",
+             Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2JkZTZkZjFlMTQwNjAwMTUzMTRkMGQiLCJpYXQiOjE3NDQ1NTA3NDUsImV4cCI6MTc0NTc2MDM0NX0.RBC_SdmYaJNl5reP45UIHoJ1Iiv6m9aFlBktNPo8y_4",
           },
         }
       )
